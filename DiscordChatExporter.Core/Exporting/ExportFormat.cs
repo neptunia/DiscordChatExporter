@@ -8,7 +8,8 @@ public enum ExportFormat
     HtmlDark,
     HtmlLight,
     Csv,
-    Json
+    Json,
+    JsonRaw
 }
 
 public static class ExportFormatExtensions
@@ -20,6 +21,7 @@ public static class ExportFormatExtensions
         ExportFormat.HtmlLight => "html",
         ExportFormat.Csv => "csv",
         ExportFormat.Json => "json",
+        ExportFormat.JsonRaw => "json",
         _ => throw new ArgumentOutOfRangeException(nameof(format))
     };
 
@@ -30,6 +32,7 @@ public static class ExportFormatExtensions
         ExportFormat.HtmlLight => "HTML (Light)",
         ExportFormat.Csv => "CSV",
         ExportFormat.Json => "JSON",
+        ExportFormat.JsonRaw => "JSON (no-formatting)",
         _ => throw new ArgumentOutOfRangeException(nameof(format))
     };
 }

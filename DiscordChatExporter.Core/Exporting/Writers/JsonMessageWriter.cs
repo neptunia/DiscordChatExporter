@@ -29,7 +29,7 @@ internal class JsonMessageWriter : MessageWriter
         });
     }
 
-    private string FormatMarkdown(string? markdown) =>
+    protected virtual string FormatMarkdown(string? markdown) =>
         PlainTextMarkdownVisitor.Format(Context, markdown ?? "");
 
     private async ValueTask WriteAttachmentAsync(

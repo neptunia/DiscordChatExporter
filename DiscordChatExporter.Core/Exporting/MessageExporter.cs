@@ -98,6 +98,7 @@ internal partial class MessageExporter
             ExportFormat.HtmlDark => new HtmlMessageWriter(stream, context, "Dark"),
             ExportFormat.HtmlLight => new HtmlMessageWriter(stream, context, "Light"),
             ExportFormat.Json => new JsonMessageWriter(stream, context),
+            ExportFormat.JsonRaw => new JsonMessageWriter(stream, context),
             _ => throw new ArgumentOutOfRangeException(nameof(format), $"Unknown export format '{format}'.")
         };
     }
